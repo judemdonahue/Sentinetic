@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import logo from "../images/sentinetic-logo-invert.svg";
+import logo from "../images/sentinetic-logo.svg";
 import '../css/login.css';
 
 function Login({ onLogin, isLoggedIn }) {
@@ -54,27 +54,27 @@ function Login({ onLogin, isLoggedIn }) {
 
   return (
     <section>
-      <div className="login-form">
+      <div className="form">
         <div className="container">
-          <div className="login-container">
+          <div className="inner">
             <div className="header-wrapper container justify-content-center align-items-center">
-              <img src={logo} alt="sentinetic-logo" className="mb-1"/>
-              <h2 className="mx-2 m-2">Login</h2>
+              <img src={logo} alt="sentinetic-logo" className="mb-2"/>
+              <h2 className="mx-2 m-2 text-dark">Login</h2>
             </div>
             <form onSubmit={handleFormSubmit}>
               <div className="form-group">
                 <label htmlFor="email">Email:</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" placeholder="email@example.com"/>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" placeholder="Example@gmail.com"/>
               </div>
               <div className="form-group">
                 <label htmlFor="password">Password:</label>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Enter your password"/>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Password"/>
               </div>
-              <button type="submit" className="btn btn-danger btn-block" disabled={loading}>
+              <button type="submit" className="btn btn-danger-new btn-block" disabled={loading}>
                 {loading ? 'Loading...' : 'Log In'}
               </button>
             </form>
-            <p> Need to register? <Link to="/register" className="btn btn-outline-danger">Click here </Link></p>
+            <p> Don't have a login? <Link to="/register" className="btn btn-outline-secondary">Register</Link></p>
           </div>
         </div>
         {errorMessage && (

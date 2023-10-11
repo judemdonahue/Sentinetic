@@ -4,12 +4,8 @@
   src: url(../fonts/modern_sans_serif_7.ttf);
 }
 .register-container {
-  height: 500px;
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 0 30%;
   padding: 30px;
-  background-color: #FDA593 ;
   border-radius: 5px;
 }
 .header-wrapper1 img{
@@ -18,7 +14,6 @@
 }
 .register-container h2 {
   font-size: 60px;
-  
   text-align: center;
   margin-bottom: 20px;
   color: white;
@@ -26,10 +21,6 @@
 
 .form-group label {
   color: white;
-}
-
-.form-group input {
-  border-color: white;
 }
 
 .register-button {

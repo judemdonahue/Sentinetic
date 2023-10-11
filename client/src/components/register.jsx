@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
 import { REGISTER_USER } from '../utils/mutations';
-import logo from "../images/sentinetic-logo-invert.svg";
-import '../css/register.css';
+import logo from "../images/sentinetic-logo.svg";
+import '../css/login.css';
 
 function Register({ onLogin }) {
   // State management for form fields and error messages.
@@ -66,24 +66,26 @@ function Register({ onLogin }) {
 
   return (
     <section>
-      <div className="container">
-        <div className="register-container">
-          <div className="header-wrapper1 container justify-content-center align-items-center">
-            <img src={logo} alt="sentinetic-logo" className="mb-2" />
-            <h2 className="mx-2 m-2">Register</h2>
+      <div className="form">
+        <div className="container">
+          <div className="inner">
+            <div className="header-wrapper container justify-content-center align-items-center">
+              <img src={logo} alt="sentinetic-logo" className="mb-2" />
+              <h2 className="mx-2 m-2 text-dark">Register</h2>
+            </div>
+            <form onSubmit={handleFormSubmit}>
+              <div className="form-group">
+                <label htmlFor="email">Email:</label>
+                <input value={email} onChange={handleInputChange} type="email" name="email" className="form-control" id="username" placeholder="Enter a valid email" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password:</label>
+                <input value={password} onChange={handleInputChange} type="password" name="password" className="form-control" id="password" placeholder="Enter a strong password" />
+              </div>
+              <button type="submit" className="btn btn-danger-new btn-block">{loading ? 'Loading...' : 'Submit'}</button>
+            </form>
+            <p> Already signed up? <Link to="/" className="btn btn-outline-secondary">Login</Link></p>
           </div>
-          <form onSubmit={handleFormSubmit}>
-            <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input value={email} onChange={handleInputChange} type="email" name="email" className="form-control" id="username" placeholder="Enter a valid email" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password:</label>
-              <input value={password} onChange={handleInputChange} type="password" name="password" className="form-control" id="password" placeholder="Enter a strong password" />
-            </div>
-            <button type="submit" className="btn btn-danger btn-block">{loading ? 'Loading...' : 'Submit'}</button>
-          </form>
-          <p> Already registered? <Link to="/" className="btn btn-outline-danger">Login here </Link></p>
         </div>
       </div>
     </section>

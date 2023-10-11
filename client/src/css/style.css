@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Kiak';
+    font-family: 'Modern Sans';
     src: url(../fonts/modern_sans_serif_7.ttf);
 }
 body {
@@ -111,11 +111,11 @@ svg{
 
 /* SEARCH CONTAINER SECTION START */
 #columnright h3{
-    font-family: 'Kiak';
+    font-family: 'Modern Sans';
     font-size: 30px;
 }
 h1{
-    font-family: 'Kiak';
+    font-family: 'Modern Sans';
     font-size: xx-large;
     font-weight: 500;
 }
@@ -204,7 +204,7 @@ h1{
     width: 450px !important;
     height: 400px !important;
     display: flex;
-    font-family: 'Kiak';
+    font-family: 'Modern Sans';
     src: url(../fonts/modern_sans_serif_7.ttf);
 }
 
